@@ -8,9 +8,10 @@
 - 如果单个组中某个文件的实际像素尺寸与后缀不符，会发出警告并跳过该文件。
 
 用法示例:
-    python pngs_to_ico.py -d . -o output --overwrite
+    python pngs_to_ico.py -d images -o icons --overwrite
 
 依赖: Pillow
+默认: 会从 `images/` 目录扫描 PNG（识别带尺寸后缀的文件），并将 ICO 文件输出到 `icons/` 目录。
 """
 from __future__ import annotations
 import argparse
@@ -25,8 +26,8 @@ COMMON_SIZES = {16, 24, 32, 48, 64, 96, 128, 256, 512}
 
 def parse_args():
     p = argparse.ArgumentParser(description='按后缀打包 PNG 为 ICO')
-    p.add_argument('-d', '--dir', type=Path, default=Path('.'), help='扫描目录（默认当前目录）')
-    p.add_argument('-o', '--out', type=Path, default=Path('.'), help='输出目录（默认当前目录）')
+    p.add_argument('-d', '--dir', type=Path, default=Path('images'), help='扫描目录（默认: images）')
+    p.add_argument('-o', '--out', type=Path, default=Path('icons'), help='输出目录（默认: icons）')
     p.add_argument('--overwrite', action='store_true', help='覆盖已存在的 .ico 文件')
     return p.parse_args()
 
@@ -44,9 +45,10 @@ def center_crop_to_square(img: Image.Image) -> Image.Image:
 def group_pngs(dirpath: Path):
     """递归扫描目录，只收集带后缀数字的文件（后缀代表尺寸）。
 
-    按文件的父文件夹名分组（folder.name -> list[(Path, size)])，适合文件夹内文件名不同的情况。
+    按文件名中尺寸前面的文字分组（例如 `name_32.png`、`name-16.png` 会归为 `name`），
+    返回: dict mapping base_name -> list[(Path, size)]。
     """
-    groups = defaultdict(list)  # folder_name -> list of (Path, size)
+    groups = defaultdict(list)  # base_name (text before size) -> list of (Path, size)
     # 递归查找 PNG 文件
     for p in sorted(dirpath.rglob('*.png')):
         if not p.is_file():
@@ -60,8 +62,10 @@ def group_pngs(dirpath: Path):
             size = int(m.group(2))
         except ValueError:
             continue
-        folder_name = p.parent.name or '.'
-        groups[folder_name].append((p, size))
+        # 使用文件名中尺寸前面的文字作为分组键，而不是父文件夹名
+        # 例如: `通知-播放-16.png` 或 `通知-播放16.png` -> base: '通知-播放'
+        base = m.group(1) or '.'
+        groups[base].append((p, size))
     return groups
 
 
@@ -108,7 +112,17 @@ def create_ico_for_group(base: str, items, out_dir: Path, overwrite: bool):
     # 构建 ICO 文件（使用 PNG 图像块直接嵌入）
     import struct
 
+    # 对相同尺寸去重，保留第一次遇到的条目（以防不同子目录里有相同 base+size 的文件）
     entries = sorted(entries, key=lambda x: x[0])
+    unique_entries = []
+    seen_sizes = set()
+    for s, data in entries:
+        if s in seen_sizes:
+            print(f"警告: 组 {base} 中发现重复尺寸 {s}, 跳过后续条目")
+            continue
+        seen_sizes.add(s)
+        unique_entries.append((s, data))
+    entries = unique_entries
     count = len(entries)
     # ICO header: reserved (2 bytes), type (2 bytes=1), count (2 bytes)
     header = struct.pack('<HHH', 0, 1, count)
