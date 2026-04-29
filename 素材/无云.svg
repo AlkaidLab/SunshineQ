@@ -18,7 +18,7 @@
       <stop offset="0" stop-color="#ffb0b9"/>
       <stop offset="1" stop-color="#f79aaa"/>
     </radialGradient>
-    <linearGradient id="orangeStroke" x1="201.552" y1="140.418" x2="815.761" y2="850.149" gradientUnits="userSpaceOnUse">
+    <linearGradient id="orangeStroke" x1="188.507" y1="122.814" x2="828.525" y2="862.368" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#d7861e"/>
       <stop offset=".52" stop-color="#ef9e28"/>
       <stop offset="1" stop-color="#d47e19"/>
@@ -43,67 +43,67 @@
       .cutTaper{fill:url(#orangeStroke)}
     </style>
     <path id="rayCutTaper" class="cutTaper" d="
-      M586.78 144.776
-      L592.781 140.647
-      L599.072 136.533
-      L605.642 132.503
-      L612.479 128.626
-      L619.568 124.97
-      L626.896 121.601
-      L634.446 118.584
-      L642.204 115.983
-      L650.154 113.856
-      L658.282 112.261
-      L655.682 100.546
-      L647.018 103.312
-      L638.734 106.604
-      L630.825 110.345
-      L623.285 114.462
-      L616.109 118.884
-      L609.291 123.543
-      L602.827 128.371
-      L596.711 133.304
-      L590.943 138.276
-      L585.518 143.224 Z"/>
-    <g id="rayPetal" transform="rotate(-8 713.552 280.835)">
-      <path class="rayFill" d="M 555.94 181.492 C 582.686 128.955 653.373 94.567 735.522 96.477 C 767.044 97.432 788.059 106.985 797.612 114.627 C 771.821 124.179 761.313 154.746 768.955 187.224 C 776.597 220.656 799.522 237.85 820.537 248.358 C 786.149 248.358 747.94 259.821 713.552 280.835 C 666.746 231.164 610.388 198.686 555.94 181.492 Z"/>
-      <path class="rayOuter" d="M 656.982 106.404 C 680.986 99.374 707.591 95.828 735.522 96.477 C 767.044 97.432 788.059 106.985 797.612 114.627 C 771.821 124.179 761.313 154.746 768.955 187.224 C 779.462 218.746 800.477 237.85 822.068 244.666"/>
+      M589.895 127.305
+      L596.136 122.985
+      L602.681 118.68
+      L609.518 114.462
+      L616.634 110.402
+      L624.016 106.573
+      L631.647 103.042
+      L639.514 99.878
+      L647.601 97.146
+      L655.891 94.91
+      L664.37 93.229
+      L661.778 81.512
+      L652.76 84.365
+      L644.134 87.766
+      L635.895 91.638
+      L628.038 95.902
+      L620.557 100.487
+      L613.447 105.319
+      L606.703 110.33
+      L600.321 115.451
+      L594.299 120.614
+      L588.634 125.753 Z"/>
+    <g id="rayPetal" transform="rotate(-8 722.021 269.131)">
+      <path class="rayFill" d="M 557.786 165.614 C 585.656 110.869 659.313 75.036 744.914 77.027 C 777.761 78.022 799.659 87.976 809.613 95.939 C 782.739 105.893 771.789 137.744 779.752 171.587 C 787.715 206.424 811.604 224.34 833.502 235.29 C 797.669 235.29 757.854 247.234 722.021 269.131 C 673.248 217.373 614.522 183.53 557.786 165.614 Z"/>
+      <path class="rayOuter" d="M 663.074 87.371 C 688.087 80.045 715.81 76.35 744.914 77.027 C 777.761 78.022 799.659 87.976 809.613 95.939 C 782.739 105.893 771.789 137.744 779.752 171.587 C 790.701 204.433 812.599 224.34 835.097 231.443"/>
       <use href="#rayCutTaper"/>
     </g>
-    <g id="rayPetalLeftArc" transform="rotate(-8 713.552 280.835)">
-      <path class="rayOuter" d="M 656.982 106.404 C 680.986 99.374 707.591 95.828 735.522 96.477 C 767.044 97.432 788.059 106.985 797.612 114.627"/>
+    <g id="rayPetalLeftArc" transform="rotate(-8 722.021 269.131)">
+      <path class="rayOuter" d="M 663.074 87.371 C 688.087 80.045 715.81 76.35 744.914 77.027 C 777.761 78.022 799.659 87.976 809.613 95.939"/>
       <use href="#rayCutTaper"/>
     </g>
   </defs>
 
   <g filter="url(#softPaint)">
     <use href="#rayPetal"/>
-    <use href="#rayPetal" transform="rotate(30 512 513.91)"/>
-    <use href="#rayPetal" transform="rotate(60 512 513.91)"/>
-    <use href="#rayPetal" transform="rotate(90 512 513.91)"/>
-    <use href="#rayPetal" transform="rotate(120 512 513.91)"/>
-    <use href="#rayPetal" transform="rotate(150 512 513.91)"/>
-    <use href="#rayPetal" transform="rotate(180 512 513.91)"/>
-    <use href="#rayPetal" transform="rotate(210 512 513.91)"/>
-    <use href="#rayPetal" transform="rotate(240 512 513.91)"/>
-    <use href="#rayPetal" transform="rotate(270 512 513.91)"/>
-    <use href="#rayPetal" transform="rotate(300 512 513.91)"/>
-    <use href="#rayPetal" transform="rotate(330 512 513.91)"/>
+    <use href="#rayPetal" transform="rotate(30 512 512)"/>
+    <use href="#rayPetal" transform="rotate(60 512 512)"/>
+    <use href="#rayPetal" transform="rotate(90 512 512)"/>
+    <use href="#rayPetal" transform="rotate(120 512 512)"/>
+    <use href="#rayPetal" transform="rotate(150 512 512)"/>
+    <use href="#rayPetal" transform="rotate(180 512 512)"/>
+    <use href="#rayPetal" transform="rotate(210 512 512)"/>
+    <use href="#rayPetal" transform="rotate(240 512 512)"/>
+    <use href="#rayPetal" transform="rotate(270 512 512)"/>
+    <use href="#rayPetal" transform="rotate(300 512 512)"/>
+    <use href="#rayPetal" transform="rotate(330 512 512)"/>
     <use href="#rayPetalLeftArc"/>
 
-    <circle cx="512" cy="513.91" r="314.269" fill="#ffec87"/>
-    <circle class="faceLine" cx="512" cy="513.91" r="314.269"/>
+    <circle cx="512" cy="512" r="327.474" fill="#ffec87"/>
+    <circle class="faceLine" cx="512" cy="512" r="327.474"/>
 
-    <circle class="eye" cx="377.313" cy="491.94" r="37.254"/>
-    <circle class="eye" cx="645.731" cy="491.94" r="37.254"/>
+    <ellipse cx="318.899" cy="563.759" rx="65.694" ry="55.741" fill="#ffd66c" opacity=".34"/>
+    <ellipse cx="705.101" cy="563.759" rx="65.694" ry="55.741" fill="#ffd66c" opacity=".34"/>
+    <ellipse cx="317.904" cy="563.759" rx="43.796" ry="26.875" fill="#f8a1ae" opacity=".95"/>
+    <ellipse cx="706.096" cy="563.759" rx="43.796" ry="26.875" fill="#f8a1ae" opacity=".95"/>
 
-    <ellipse cx="326.686" cy="563.582" rx="63.045" ry="53.493" fill="#ffd66c" opacity=".34"/>
-    <ellipse cx="705.91" cy="563.582" rx="63.045" ry="53.493" fill="#ffd66c" opacity=".34"/>
-    <ellipse cx="325.731" cy="563.582" rx="42.03" ry="25.791" fill="#f8a1ae" opacity=".95"/>
-    <ellipse cx="704" cy="563.582" rx="42.03" ry="25.791" fill="#f8a1ae" opacity=".95"/>
+    <circle class="eye" cx="371.654" cy="489.107" r="38.819"/>
+    <circle class="eye" cx="652.346" cy="489.107" r="38.819"/>
 
-    <path class="mouth" d="M 462.328 542.567 c 0 30.567 41.075 30.567 48.716 0.955 c 7.642 29.612 48.716 29.612 48.716 -0.955"/>
+    <path class="mouth" d="M 461.237 541.861 c 0 31.851 42.801 31.851 50.763 0.995 c 7.963 30.856 50.763 30.856 50.763 -0.995"/>
 
-    <path fill="#fff7b8" opacity=".18" d="M 232.119 437.492 C 267.462 300.895 380.179 216.835 517.731 215.88 C 658.149 214.925 774.686 305.671 807.164 442.268 C 746.985 322.865 637.134 256 514.865 256.955 C 391.641 257.91 289.432 323.821 232.119 437.492 Z"/>
+    <path fill="#fff7b8" opacity=".18" d="M 220.359 432.371 C 257.187 290.034 374.64 202.442 517.972 201.447 C 664.29 200.452 785.724 295.011 819.567 437.348 C 756.859 312.927 642.392 243.253 514.985 244.248 C 386.584 245.243 280.08 313.924 220.359 432.371 Z"/>
   </g>
 </svg>
