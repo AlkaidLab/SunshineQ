@@ -1,15 +1,16 @@
 All files in this repository are licensed under the Creative Commons
 Attribution-NonCommercial-NoDerivatives 4.0 International Public License
-(CC BY-NC-ND 4.0).
+(CC BY-NC-ND 4.0), with one exception: the files in the scripts/ directory
+are licensed under the MIT License (see scripts/LICENSE).
 
-Copyright (c) AlkaidLab.
+Copyright (c) AlkaidLab and ShadowLemoon.
 
 Full licence text below, as published at
 https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode
 Summary (not the licence): https://creativecommons.org/licenses/by-nc-nd/4.0/
 
 Attribution to give when you share these files unchanged:
-  "SunshineQ artwork, (c) AlkaidLab, CC BY-NC-ND 4.0, https://creativecommons.org/licenses/by-nc-nd/4.0/"
+  "SunshineQ artwork, (c) AlkaidLab and ShadowLemoon, CC BY-NC-ND 4.0, https://creativecommons.org/licenses/by-nc-nd/4.0/"
 with a link to the licence and an indication that the files are shared as they are.
 
 This licence does not license trademark rights (CC BY-NC-ND 4.0, section 2(b)(2)). See TRADEMARKS.md.
