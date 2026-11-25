@@ -21,8 +21,9 @@ CC BY-NC-ND 4.0 section 2(b)(2) states that patent and trademark rights are not 
 
 - Give your own product, app, website, account or package any of these names or logos, or a name or logo that could be taken for them.
 - Suggest that your product is made, endorsed or supported by AlkaidLab or is an official release of one of its products.
-- Keep these names, logos or files in a product of your own. **A product that builds on this repository has to take its own name and remove these names,
-  logos, 薇薇 and these files from what it ships**, unless AlkaidLab has agreed in writing.
+- Use these names, logos, icons or 薇薇 as the identity of a product of your own. **A product that builds on this repository has to take its own name and
+  its own icons and logos**, unless AlkaidLab has agreed in writing. This limits the use as a mark only; sharing the files unchanged under CC BY-NC-ND 4.0
+  (see above) stays allowed.
 
 ## Questions and permission
 
